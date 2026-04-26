@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <userSettings>
+        <AgIO.Properties.Settings>
+            <setting name="setUDP_isOn" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setPort_wasSteerModuleConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setNTRIP_casterIP" serializeAs="String">
+                <value>66.185.123.66</value>
+            </setting>
+            <setting name="setNTRIP_casterPort" serializeAs="String">
+                <value>2101</value>
+            </setting>
+            <setting name="setNTRIP_mount" serializeAs="String">
+                <value>NEAR</value>
+            </setting>
+            <setting name="setNTRIP_userName" serializeAs="String">
+                <value>centipede</value>
+            </setting>
+            <setting name="setNTRIP_userPassword" serializeAs="String">
+                <value>centipede</value>
+            </setting>
+            <setting name="setNTRIP_isOn" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setNTRIP_sendGGAInterval" serializeAs="String">
+                <value>10</value>
+            </setting>
+            <setting name="setNTRIP_sendToUDPPort" serializeAs="String">
+                <value>2233</value>
+            </setting>
+            <setting name="setNTRIP_manualLat" serializeAs="String">
+                <value>53</value>
+            </setting>
+            <setting name="setNTRIP_manualLon" serializeAs="String">
+                <value>-111</value>
+            </setting>
+            <setting name="setNTRIP_casterURL" serializeAs="String">
+                <value>crtk.net</value>
+            </setting>
+            <setting name="setNTRIP_isGGAManual" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setNTRIP_isTCP" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setNTRIP_isHTTP10" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setF_culture" serializeAs="String">
+                <value>en</value>
+            </setting>
+            <setting name="setPort_wasMachineModuleConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setPort_wasIMUConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setPort_wasGPSConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setRadio_isOn" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setUDP_isSendNMEAToUDP" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setPort_wasRtcmConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setNTRIP_sendToSerial" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setNTRIP_sendToUDP" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setNTRIP_packetSize" serializeAs="String">
+                <value>256</value>
+            </setting>
+            <setting name="setMod_isIMUConnected" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setMod_isMachineConnected" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setMod_isSteerConnected" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setPass_isOn" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="eth_loopOne" serializeAs="String">
+                <value>127</value>
+            </setting>
+            <setting name="eth_loopTwo" serializeAs="String">
+                <value>255</value>
+            </setting>
+            <setting name="eth_loopThree" serializeAs="String">
+                <value>255</value>
+            </setting>
+            <setting name="eth_loopFour" serializeAs="String">
+                <value>255</value>
+            </setting>
+        </AgIO.Properties.Settings>
+    </userSettings>
+</configuration>

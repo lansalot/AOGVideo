@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <userSettings>
+        <AgIO.Properties.Settings>
+            <setting name="setUDP_isOn" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setPort_wasSteerModuleConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setF_culture" serializeAs="String">
+                <value>en</value>
+            </setting>
+            <setting name="setPort_wasMachineModuleConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setPort_wasIMUConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setPort_wasGPSConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setUDP_isSendNMEAToUDP" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setPort_wasRtcmConnected" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setUDP_isUsePluginApp" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="setMod_isIMUConnected" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setMod_isMachineConnected" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="setMod_isSteerConnected" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="eth_loopOne" serializeAs="String">
+                <value>127</value>
+            </setting>
+            <setting name="eth_loopTwo" serializeAs="String">
+                <value>255</value>
+            </setting>
+            <setting name="eth_loopThree" serializeAs="String">
+                <value>255</value>
+            </setting>
+            <setting name="eth_loopFour" serializeAs="String">
+                <value>255</value>
+            </setting>
+        </AgIO.Properties.Settings>
+    </userSettings>
+</configuration>
