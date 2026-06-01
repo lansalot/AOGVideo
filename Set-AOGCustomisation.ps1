@@ -118,7 +118,7 @@ Add-AppxPackage -Path "c:\windows\temp\winget.msixbundle"
 
 Write-Host "Installing VLC and vscode" -Fore Green
 winget install videolan.vlc --silent --accept-source-agreements
-winget install anydesk.anydesk --silent --accept-source-agreements
+# winget install anydesk.anydesk --silent --accept-source-agreements
 winget install winaero.tweaker --silent --accept-source-agreements
 winget install Microsoft.VCRedist.2005.x64 --silent --accept-source-agreements
 winget install Microsoft.VCRedist.2005.x86 --silent --accept-source-agreements
@@ -255,3 +255,6 @@ Set-LocalUser -name "aog" -Password ([securestring]::new())
 Set-LocalUser -name "aog" -AccountNeverExpires:$true
 
 regedit -s anydesk.reg
+
+Write-Host "Installing RustDesk" -Fore Green
+.\RustDesk.ps1
