@@ -119,18 +119,18 @@ Add-AppxPackage -Path "c:\windows\temp\winget.msixbundle"
 Write-Host "Installing VLC" -Fore Green
 winget install videolan.vlc --silent --accept-source-agreements
 winget install winaero.tweaker --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2005.x64 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2005.x86 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2008.x64 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2008.x86 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2010.x64 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2010.x86 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2012.x64 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2012.x86 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2013.x64 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2013.x86 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2015+.x64 --silent --accept-source-agreements
-winget install Microsoft.VCRedist.2015+.x86 --silent --accept-source-agreements
+winget install Microsoft.VCRedist.2005.x64 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2005.x86 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2008.x64 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2008.x86 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2010.x64 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2010.x86 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2012.x64 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2012.x86 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2013.x64 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2013.x86 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2015+.x64 --silent --accept-source-agreements --source winget
+winget install Microsoft.VCRedist.2015+.x86 --silent --accept-source-agreements --source winget
 Add-MpPreference -ExclusionPath "C:\Program Files\Winaero Tweaker"
 Add-MpPreference -ExclusionProcess "C:\Program Files\Winaero Tweaker\WinaeroTweaker.exe"
 Copy-Item $PSScriptRoot\winarero.ini $ENV:USERPROFILE\desktop
