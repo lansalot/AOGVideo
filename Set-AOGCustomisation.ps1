@@ -234,7 +234,8 @@ ipconfig | findstr /i ipv4
 
 if ([System.Windows.MessageBox]::Show("Set up ethernet?", "Confirmation", "YesNo", "Question") -eq "Yes") {
     $eth = get-netadapter -physical | where { $_.MediaType -eq '802.3' }
-    SetIP -InterfaceIndex $eth.InterfaceIndex -IPAddress "192.168.5.5" -SubnetMask "255.255.255.0"
+    Set-NetIPInterface -InterfaceIndex $eth.InterfaceIndex -Dhcp Disabled
+    New-NetIPAddress -InterfaceIndex $eth.InterfaceIndex -IPAddress "192.168.5.5" -PrefixLength 24
 }
 
 if ([System.Windows.MessageBox]::Show("Do you want to restart ?", "Confirmation", "YesNo", "Question") -eq "Yes") {
@@ -244,7 +245,10 @@ if ([System.Windows.MessageBox]::Show("Do you want to restart ?", "Confirmation"
 Write-Output "Now, username shenanigans"
 # Allow RDP through Windows Firewall (optional)
 
-Rename-LocalUser -Name $ENV:USERNAME -NewName "aog"
+if ($ENV:USERNAME -ne "aog") {
+    Write-Output "Renaming user $ENV:USERNAME to aog"
+    Rename-LocalUser -Name $ENV:USERNAME -NewName "aog"
+}
 $RegistryPath = 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon'
 # Set-ItemProperty $RegistryPath 'AutoAdminLogon' -Value "1" -Type String | Out-Null
 Remove-ItemProperty $RegistryPath 'DefaultUsername' -ErrorAction SilentlyContinue | Out-Null # -Value "owner" -type String  | Out-Null
