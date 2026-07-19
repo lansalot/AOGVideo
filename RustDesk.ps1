@@ -71,6 +71,7 @@ if ($rdver -eq $RustDeskOnGitHub.Version)
 }
 
 cd C:\windows\Temp
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 Write-Output "Downloading RustDesk $($RustDeskOnGitHub.Version) from $($RustDeskOnGitHub.Downloadlink)"
 $nc = New-Object System.Net.WebClient
 $nc.DownloadFile($RustDeskOnGitHub.Downloadlink, "rustdesk.msi")
