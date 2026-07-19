@@ -71,13 +71,23 @@ if ($rdver -eq $RustDeskOnGitHub.Version)
 }
 
 cd C:\windows\Temp
-
-Invoke-WebRequest $RustDeskOnGitHub.Downloadlink -Outfile "rustdesk.msi"
+Write-Output "Downloading RustDesk $($RustDeskOnGitHub.Version) from $($RustDeskOnGitHub.Downloadlink)"
+$nc = New-Object System.Net.WebClient
+$nc.DownloadFile($RustDeskOnGitHub.Downloadlink, "rustdesk.msi")
 msiexec /i rustdesk.msi /qn CREATESTARTMENUSHORTCUTS="Y" CREATEDESKTOPSHORTCUTS="Y" INSTALLPRINTER="N" /l*v install.log
 Start-Sleep -seconds 30
 
 $ServiceName = 'Rustdesk'
 $arrService = Get-Service -Name $ServiceName -ErrorAction SilentlyContinue
+
+
+Write-Output "RustDesk Service is running."
+cd $env:ProgramFiles\RustDesk\
+.\rustdesk.exe --get-id | Write-Output -OutVariable rustdesk_id
+
+.\rustdesk.exe --config host=ntripaog.mywire.org,key=$rustdesk_cfg
+
+.\rustdesk.exe --password $rustdesk_pw
 
 if ($arrService -eq $null)
 {
@@ -94,13 +104,6 @@ while ($arrService.Status -ne 'Running')
     Start-Sleep -seconds 5
     $arrService.Refresh()
 }
-
-cd $env:ProgramFiles\RustDesk\
-.\rustdesk.exe --get-id | Write-Output -OutVariable rustdesk_id
-
-.\rustdesk.exe --config host=ntripaog.mywire.org,key=$rustdesk_cfg
-
-.\rustdesk.exe --password $rustdesk_pw
 
 Write-Output "..............................................."
 # Show the value of the ID Variable
